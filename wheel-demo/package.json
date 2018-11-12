@@ -1,0 +1,15 @@
+{
+  "name": "wheel-demo",
+  "version": "1.0.0",
+  "description": "基于vue的ui轮子",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "nn",
+  "license": "MIT"
+}
