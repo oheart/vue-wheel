@@ -16,13 +16,8 @@ export default {
     iconPos: {
       type: String,
       default: 'left',
-      validator(value){  
-        console.log('value', value);
-        if(value !== 'left' && value !== 'right'){
-           return false;
-        }else{
-          return true;
-        }
+      validator(value){   
+        return value === 'left' || value === 'right';
       }
     }
   }
