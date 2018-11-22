@@ -28,7 +28,7 @@ const expect = chai.expect
             icon: 'settings'
         }
     });       
-    button.$mount('#test')
+    button.$mount() // mount到内存
     let useElement = button.$el.querySelector('use')
     console.log(useElement);
     let href = useElement.getAttribute('xlink:href')
