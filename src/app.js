@@ -20,6 +20,9 @@ new Vue({
 // 单元测试
 import chai from 'chai'
 const expect = chai.expect
+import spies from 'chai-spies'
+chai.use(spies)
+
 {  
     // 动态声明一个按钮，渲染到页面--测试传入的icon参数
     const Constructor = Vue.extend(Button)    
@@ -72,7 +75,7 @@ const expect = chai.expect
      vm.$destroy()
 }
 {
-    // 动态声明一个按钮，渲染到页面--测试传入的iconPos参数
+    // 动态声明一个按钮，渲染到页面--测试传入的iconPos参数（order：1代表图标在左边；order：2代表图标在右边，也就是iconPos等于right）
     const div = document.createElement('div')
     document.body.appendChild(div)
     const Constructor = Vue.extend(Button)
@@ -91,7 +94,7 @@ const expect = chai.expect
     vm.$destroy()
 }
 {
-    // 动态声明一个按钮，渲染到页面--测试click事件
+    // 动态声明一个按钮，渲染到页面--测试click事件(引入chai-spies)
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData:{
@@ -99,10 +102,10 @@ const expect = chai.expect
         }
     })
     vm.$mount()
-    vm.$on('click', function(){ // 需要mock
-        console.log(1)
-    })
+    let spy = chai.spy(function(){})  // 函数的mock
+    vm.$on('click', spy)
     let button = vm.$el
     console.log('button', button)
     button.click()
+    expect(spy).to.have.been.called() // 点击到时候，期望mock的函数被调用了
 }

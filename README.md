@@ -33,3 +33,6 @@ Learning to make vue wheels
     - BDD(Behavior-driven development)：行为驱动开发--> 用自然语言描述需求，只要这么需求测试通过就可以...
     - TDD(Test-driven development): 测试驱动开发--> 先写测试程序，然后编码
     - Assert: 断言 --> 我主观认为
+    
+    **chai-spies**
+    [chai-spies](https://github.com/chaijs/chai-spies/blob/master/package.json)
