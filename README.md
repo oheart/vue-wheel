@@ -1,4 +1,4 @@
-# vue-wheel
+## vue-wheel
 Learning to make vue wheels
 
 ## 安装
@@ -27,3 +27,7 @@ Learning to make vue wheels
 **git-open使用**
 - npm install -g git-open
 - 切换到项目目录，命令行输入git-open可打开项目远程所在的git仓库
+**chai.js涉及的几个概念**
+- BDD(Behavior-driven development)：行为驱动开发--> 用自然语言描述需求，只要这么需求测试通过就可以...
+- TDD(Test-driven development): 测试驱动开发--> 先写测试程序，然后编码
+- Assert: 断言 --> 我主观认为
