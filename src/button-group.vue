@@ -5,6 +5,16 @@
 </template>
 
 <script>
+export default{
+    mounted(){
+       for(let node of this.$el.children){  // 处理类似<div><g-button></g-button></div>的不规范情况
+           let name = node.nodeName.toLowerCase();
+           if(name !== 'button'){
+               console.warn(`g-button-group的元素应该全是button, 但是你写的是${name}`);
+           }
+       }
+    }
+}
 </script>
 
 <style lang="scss">
