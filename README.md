@@ -36,3 +36,13 @@ Learning to make vue wheels
     
     **chai-spies**
     [chai-spies](https://github.com/chaijs/chai-spies/blob/master/package.json)
+
+    **使用Karma + Mocha做单元测试**
+    - Karma是一个测试运行器，它可以呼起浏览器，加载测试脚本，然后运行测试用例
+    - Mocha是一个单元测试框架／库，它可以用来写测试用例
+    - Sinon是一个spy/mock库，用以辅助测试（使用后才能理解） 
+
+    自动化测试步骤：  
+    1. npm i -D karma karma-chrome-launcher karma-mocha karma-sinon-chai mocha sinon sinon-chai karma-chai karma-chai-spies
+    2. ....未完待续
+
