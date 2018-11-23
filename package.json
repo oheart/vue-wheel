@@ -1,4 +1,11 @@
 {
+  "name": "vue-wheel",
+  "version": "0.0.1",
+  "description": "vue轮子",
+  "main": "dist/index.js",
+  "scripts":{
+      "start": "parcel index.html no-chache"
+  },
   "devDependencies": {
     "@vue/component-compiler-utils": "2.3.0",
     "chai": "4.2.0",
