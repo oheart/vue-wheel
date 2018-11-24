@@ -6,6 +6,7 @@
 
 <script>
 export default{
+    name: 'gButtonGroup',
     mounted(){
        for(let node of this.$el.children){  // 处理类似<div><g-button></g-button></div>的不规范情况
            let name = node.nodeName.toLowerCase();
@@ -17,7 +18,7 @@ export default{
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .g-button-group{
     display: inline-flex;
     vertical-align: middle;
