@@ -3,13 +3,16 @@
   "version": "0.0.1",
   "description": "vue轮子",
   "main": "dist/index.js",
-  "scripts":{
-      "start": "parcel index.html no-chache"
+  "scripts": {
+    "start": "parcel index.html no-chache",
+    "dev-test": "parcel watch test/* no-chache & karma start",
+    "test": "parcel build test/* no-chache --no-minify && karma start --single-run"
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "2.3.0",
     "chai": "4.2.0",
     "chai-spies": "1.0.0",
+    "cssnano": "4.1.10",
     "karma": "3.1.1",
     "karma-chai": "0.1.0",
     "karma-chai-spies": "0.1.4",

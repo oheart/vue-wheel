@@ -60,7 +60,7 @@ npm i
 - TDD(Test-driven development): 测试驱动开发--> 先写测试程序，然后编码
 - Assert: 断言 --> 我主观认为
 
-**chai-spies:**
+**chai-spies**
 [chai-spies](https://github.com/chaijs/chai-spies/blob/master/package.json)
 
 **使用Karma + Mocha做单元测试**
