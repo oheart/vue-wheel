@@ -32,6 +32,12 @@
 			.button-wrapper{
 				margin-bottom: 20px;
 			}
+			.input-wrapper2{
+				margin-top: 15px;
+			}
+			.input-wrapper2 .msg-txt{
+				margin: 0 10px;
+			}
 		</style>
     </head>
     <body>
@@ -65,9 +71,14 @@
 				<g-input value="姓名" error="姓名不能少于两个字"></g-input>
 			</div>
 
+			<!-- input双向绑定 -->
+			<div class="input-wrapper2">
+				<g-input v-model="message"></g-input>
+				<span class="msg-txt">{{message}}</span>
+				<button @click="message+=1">+1</button>
+			</div>
 
-
-			
+	
 		</div>
 		<script src="./src/app.js"></script>
     </body>

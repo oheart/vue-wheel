@@ -19,3 +19,10 @@
 - input
 - focus
 - blur
+
+## 如何让input组件支持v-model
+```html
+ <input type="text"   :value="value"  @input="$emit('input', $event.target.value)">
+```
+
+
