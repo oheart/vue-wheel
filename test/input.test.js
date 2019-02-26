@@ -80,9 +80,16 @@ describe('Input', ()=> {
                 // 触发input的change事件(回调调用且change事件第一个参数是event)
                 var event = new Event(eventName)
                 console.log('event', event)
+                // 给event添加target.value值
+                Object.defineProperty(
+                    event, 'target', {
+                        value: {value: 'hi'}, 
+                        enumerable: true
+                    }
+                )
                 let inputEle = vm.$el.querySelector('input')
                 inputEle.dispatchEvent(event)
-                expect(callback).to.have.been.calledWith(event)
+                expect(callback).to.have.been.calledWith('hi')
             })
         })
     })
