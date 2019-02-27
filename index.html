@@ -38,6 +38,11 @@
 			.input-wrapper2 .msg-txt{
 				margin: 0 10px;
 			}
+
+			.grid-wrapper{
+				margin-top: 20px;
+			}
+			
 		</style>
     </head>
     <body>
@@ -76,6 +81,33 @@
 				<g-input v-model="message"></g-input>
 				<span class="msg-txt">{{message}}</span>
 				<button @click="message+=1">+1</button>
+			</div>
+
+			<!-- 网格系统 -->
+			<div class="grid-wrapper">
+				<g-row>
+					<g-col>12</g-col>
+					<g-col>12</g-col>
+				</g-row>
+				<g-row>
+					<g-col>8</g-col>
+					<g-col>8</g-col>
+					<g-col>8</g-col>
+				</g-row>
+				<g-row>
+					<g-col>6</g-col>
+					<g-col>6</g-col>
+					<g-col>6</g-col>
+					<g-col>6</g-col>
+				</g-row>
+				<g-row>
+					<g-col span="2">2</g-col>
+					<g-col span="22">22</g-col>
+				</g-row>
+				<g-row>
+					<g-col span="4">4</g-col>
+					<g-col span="20">20</g-col>
+				</g-row>
 			</div>
 
 	
