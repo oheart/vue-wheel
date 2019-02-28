@@ -1,6 +1,5 @@
 <template>
-    <div class="col" :class="[span && `col-${span}`, offset && `offset-${offset}`]"
-       :style="{paddingLeft: gutter/2 + 'px', paddingRight: gutter/2 + 'px'}"> 
+    <div class="col" :class="colClass" :style="colStyle"> 
        <div style="border: 1px solid red;height:70px;">
           <slot></slot>
        </div>
@@ -18,9 +17,24 @@ export default{
         type: [Number, String]
       }
     },
-    data(){
+    data(){  // 只会在created的时候读一次
       return {
         gutter: 0
+      }
+    },
+    computed:{
+      colClass(){
+          let {span, offset} = this;
+          return [
+              span && `col-${span}`, 
+              offset && `offset-${offset}`
+          ];
+      },
+      colStyle(){
+        return {
+            paddingLeft: this.gutter/2 + 'px', 
+            paddingRight: this.gutter/2 + 'px'
+        }
       }
     },
     created(){
@@ -38,7 +52,7 @@ export default{
   height: 70px;
   // background: #46A0FC;
   // border: 1px solid #f2df37;
-  color: #FFF;
+  color: #000;
 
   $class-prefix: col-;
   @for $n from 1 through 24 {
