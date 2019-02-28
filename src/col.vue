@@ -1,7 +1,7 @@
 <template>
     <div class="col" :class="[span && `col-${span}`, offset && `offset-${offset}`]"
        :style="{paddingLeft: gutter/2 + 'px', paddingRight: gutter/2 + 'px'}"> 
-       <div style="border: 1px solid red;height: 70px;">
+       <div style="border: 1px solid red;height:68px;">
           <slot></slot>
        </div>
     </div>
